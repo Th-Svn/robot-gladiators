@@ -5,6 +5,12 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
+// Game States 
+// "WIN" - Player robot has defeated all enemy-robots
+// * Fight all enemy-robots 
+// * Defeat each enemy-robots 
+// "LOSE" - Player robot's health is zero or less 
+
 // check to see if the value of playerHealth variable is greater that 0
 if (playerHealth > 0) {
     console.log("Your player is still alive!");
@@ -16,12 +22,15 @@ if (playerHealth > 0) {
 // You can log multiple values at once like this 
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roberto";
+var enemyNames = ["Roberto", "Amy Android", "Robot Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+console.log(enemyNames[0]);
+console.log(enemyNames.length);
+
 // this creates a function named "fight"
-var fight = function() {
+var fight = function(enemyName) {
     // Alert Players that they are starting the round
     window.alert("Welcome to Robot Gladiator");
 
@@ -88,6 +97,9 @@ else {
 }
 };
 
+for(var i=0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
 
 console.log("This logs a string, good for leaving yourself a message");
 
@@ -95,8 +107,8 @@ console.log("This logs a string, good for leaving yourself a message");
 console.log(10 + 10);
 
 //What is this ? logs "Our robot's name is" and the value asigned to playerName
-console.log("Our robot's name is " + playerName)
+console.log("Our robot's name is " + playerName);
 
-fight();
+//fight();
 
 
